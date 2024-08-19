@@ -13,8 +13,10 @@ async fn get_contract_instance()  {
 
     abigen!(Contract(
         name = "MyContract",
-        abi = "out/release/test-v2-abi.json"
+        abi = "./out/release/test-v2-abi.json"
     ));
+
+    
 
     // Launch a local network and deploy the contract
     let mut wallets = launch_custom_provider_and_get_wallets(
